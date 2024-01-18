@@ -1,62 +1,89 @@
 ---
-import Icon from './Icon.astro';
----
 
-<section class="box skills" id="skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+---
+<section class="section" id="skills">
+	<header class="section-header stack gap-2 lg:gap-4">
+		<h3>My Skills</h3>
+		<p>See my most recent projects below to get an idea of my skills.</p>
+	</header>
+	<div>
+		<h5>Languages and Tools</h5>
+		<div class="logo-images-container">
+			<img src="../../public/assets/stack-icons/html5.png" alt="HTML" class="logo" />
+			<img src="../../public/assets/stack-icons/css3.png" alt="CSS" class="logo" />
+			<img src="../../public/assets/stack-icons/javascript.png" alt="JS" class="logo" />
+			<img src="../../public/assets/stack-icons/typescript.png" alt="TS" class="logo" />
+			<img src="../../public/assets/stack-icons/express.png" alt="Express" class="logo" />
+			<img src="../../public/assets/stack-icons/node.png" alt="Node" class="logo" />
+			<img src="../../public/assets/stack-icons/python.png" alt="Python" class="logo" />
+			<img src="../../public/assets/stack-icons/firebase.png" alt="Firebase" class="logo" />
+		</div>
 	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Industry Leader</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
+	<div>
+		<h5>Libraries and Framework</h5>
+		<div class="logo-images-container">
+			<img src="../../public/assets/stack-icons/react.png" alt="React" class="logo" />
+			<img src="../../public/assets/stack-icons/next.png" alt="Next" class="logo" />
+			<img src="../../public/assets/stack-icons/astro.png" alt="Astro" class="logo" />
+		</div>
 	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Strategy-Minded</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+	<div>
+		<h5>Database</h5>
+			<img src="../../public/assets/stack-icons/mongoDB.png" alt="MongoDB" class="logo" />
+		<h5>Others</h5>
+		<div class="logo-images-container">
+			<img src="../../public/assets/stack-icons/cypress.png" alt="Cypress" class="logo" />
+			<img src="../../public/assets/stack-icons/playwrite.png" alt="Playwright" class="logo" />
+			<img src="../../public/assets/stack-icons/git.png" alt="Git" class="logo" />
+			<img src="../../public/assets/stack-icons/gitHub.png" alt="GitHub" class="logo" />
+		</div>
 	</div>
 </section>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
+	.section {
+		gap: 2rem;
 	}
 
-	.skills {
+	.section-header {
+		justify-self: left;
+		text-align: left;
+		max-width: 50ch;
+		font-size: var(--text-md);
+		color: var(--gray-300);
+	}
+
+	.section-header h3 {
+		font-size: var(--text-2xl);
+	}
+
+	.logo-images-container {
 		display: flex;
-		flex-direction: column;
-		gap: 3rem;
+		justify-content: left;
+		gap: 1rem;
+		padding: 1rem;
 	}
-
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
-
-	.skills p {
-		color: var(--gray-400);
+	.logo {
+		width: 60px;
+		height: 60px;
+		object-fit: cover;
 	}
 
 	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
-
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+		.section {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
 			gap: 5rem;
 		}
 
-		.skills h2 {
-			font-size: var(--text-2xl);
+		.section-header {
+			grid-area: header;
+			font-size: var(--text-lg);
 		}
+
+		.section-header h3 {
+			font-size: var(--text-4xl);
+		}
+
 	}
 </style>
