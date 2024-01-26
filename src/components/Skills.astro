@@ -1,72 +1,140 @@
 ---
+import Hero from './Hero.astro';
 
+const skills = [
+  { path: "html5.svg", alt: "HTML5", modeClasses: [] },
+  { path: "css3.svg", alt: "CSS3", modeClasses: [] },
+  { path: "javascript.svg", alt: "JavaScript", modeClasses: [] },
+  { path: "express.svg", alt: "Express.js", modeClasses: ["light-mode-only"] },
+  { path: "express-dark.svg", alt: "Express.js", modeClasses: ["dark-mode-only"] },
+  { path: "nodejs.svg", alt: "Node.js", modeClasses: [] },
+  { path: "python.svg", alt: "Python", modeClasses: [] },
+  { path: "firebase.svg", alt: "Firebase", modeClasses: [] },
+];
+
+const libraries = [
+  { path: "reactjs.svg", alt: "React.js", modeClasses: [] },
+  { path: "nextjs.svg", alt: "Next.js", modeClasses: ["light-mode-only"] },
+  { path: "nextjs-dark.svg", alt: "Next.js", modeClasses: ["dark-mode-only"] },
+  { path: "astro.svg", alt: "Astro", modeClasses: ["light-mode-only"] },
+  { path: "astro-dark.svg", alt: "Astro", modeClasses: ["dark-mode-only"] },
+];
+
+const databases = [
+  { path: "mongoDB.svg", alt: "MongoDB", modeClasses: [] },
+];
+
+const others = [
+  { path: "cypress.svg", alt: "Cypress", modeClasses: ["light-mode-only"] },
+  { path: "cypress-dark.png", alt: "Cypress", modeClasses: ["dark-mode-only"] },
+  { path: "playwright.svg", alt: "Playwright", modeClasses: [] },
+  { path: "git.svg", alt: "Git", modeClasses: [] },
+];
 ---
+
 <section class="section" id="skills">
-	<header class="section-header stack gap-2 lg:gap-4">
-		<h3>My Skills</h3>
-		<p>See my most recent projects below to get an idea of my skills.</p>
-	</header>
-	<div>
-		<h5>Languages and Tools</h5>
-		<div class="logo-images-container">
-			<img src="../../public/assets/stack-icons/html5.png" alt="HTML" class="logo" />
-			<img src="../../public/assets/stack-icons/css3.png" alt="CSS" class="logo" />
-			<img src="../../public/assets/stack-icons/javascript.png" alt="JS" class="logo" />
-			<img src="../../public/assets/stack-icons/typescript.png" alt="TS" class="logo" />
-			<img src="../../public/assets/stack-icons/express.png" alt="Express" class="logo" />
-			<img src="../../public/assets/stack-icons/node.png" alt="Node" class="logo" />
-			<img src="../../public/assets/stack-icons/python.png" alt="Python" class="logo" />
-			<img src="../../public/assets/stack-icons/firebase.png" alt="Firebase" class="logo" />
+	<Hero 
+		title="My Skills" 
+		tagline="Passionate about learning and mastering new technologies."
+		align="start">
+	</Hero>
+
+	<!-- Render Languages and Tools -->
+	<div class="skills-content">
+		<div>
+			<h5>Languages and Tools</h5>
+			<div class="images-container">
+			{skills.map(skill => (
+				<img
+				src={`../../public/assets/stack-icons/${skill.path}`}
+				alt={skill.alt}
+				class={`logo ${skill.modeClasses.join(' ')}`}
+				/>
+			))}
+			</div>
 		</div>
-	</div>
-	<div>
-		<h5>Libraries and Framework</h5>
-		<div class="logo-images-container">
-			<img src="../../public/assets/stack-icons/react.png" alt="React" class="logo" />
-			<img src="../../public/assets/stack-icons/next.png" alt="Next" class="logo" />
-			<img src="../../public/assets/stack-icons/astro.png" alt="Astro" class="logo" />
+
+		<!-- Render Libraries and Frameworks -->
+		<div>
+			<h5>Libraries and Frameworks</h5>
+			<div class="images-container">
+			{libraries.map(library => (
+				<img
+				src={`../../public/assets/stack-icons/${library.path}`}
+				alt={library.alt}
+				class={`logo ${library.modeClasses.join(' ')}`}
+				/>
+			))}
+			</div>
 		</div>
-	</div>
-	<div>
-		<h5>Database</h5>
-			<img src="../../public/assets/stack-icons/mongoDB.png" alt="MongoDB" class="logo" />
-		<h5>Others</h5>
-		<div class="logo-images-container">
-			<img src="../../public/assets/stack-icons/cypress.png" alt="Cypress" class="logo" />
-			<img src="../../public/assets/stack-icons/playwrite.png" alt="Playwright" class="logo" />
-			<img src="../../public/assets/stack-icons/git.png" alt="Git" class="logo" />
-			<img src="../../public/assets/stack-icons/gitHub.png" alt="GitHub" class="logo" />
+
+		<!-- Render Databases -->
+			<div class="combined-row">
+				<div>
+					<h5>Databases</h5>
+					<div class="images-container">
+					{databases.map(skill => (
+						<img
+						src={`../../public/assets/stack-icons/${skill.path}`}
+						alt={skill.alt}
+						class={`logo ${skill.modeClasses.join(' ')}`}
+						/>
+					))}
+					</div>
+				</div>
+
+			<!-- Render Others -->
+			<div>
+				<h5>Others</h5>
+				<div class="images-container">
+				{others.map(skill => (
+					<img
+					src={`../../public/assets/stack-icons/${skill.path}`}
+					alt={skill.alt}
+					class={`logo ${skill.modeClasses.join(' ')}`}
+					/>
+				))}
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
 
 <style>
+	:global(.theme-dark) .logo.light-mode-only {
+		display: none;
+	}
+
+	:global(html:not(.theme-dark)) .logo.dark-mode-only {
+		display: none;
+	}
 	.section {
 		gap: 2rem;
+		margin-top: 2rem;
 	}
 
-	.section-header {
-		justify-self: left;
-		text-align: left;
-		max-width: 50ch;
-		font-size: var(--text-md);
-		color: var(--gray-300);
+	.skills-content {
+		margin-top: 2rem;
 	}
 
-	.section-header h3 {
-		font-size: var(--text-2xl);
-	}
-
-	.logo-images-container {
+	.images-container {
 		display: flex;
 		justify-content: left;
 		gap: 1rem;
 		padding: 1rem;
+		flex-wrap: wrap;
+		max-width: 100%;
 	}
 	.logo {
-		width: 60px;
-		height: 60px;
+		width: 65px;
+		height: 65px;
 		object-fit: cover;
+	}
+
+	.combined-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
 	}
 
 	@media (min-width: 50em) {
@@ -76,14 +144,8 @@
 			gap: 5rem;
 		}
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
+		.combined-row {
+			gap: 5rem;
 		}
-
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
-
 	}
 </style>
