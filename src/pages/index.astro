@@ -1,4 +1,11 @@
 ---
+// TODO: 
+// import all projects from a separate file
+// import all skills from a separate file
+// create component for project section on index.astro
+// adjust font, color, and background
+// create a sub header component to use for about, skill, project
+
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -22,8 +29,30 @@ const projects = [
 		code: "https://github.com/SDemero/capstone-client",
 		site: "https://ttp-capstone-investedfitness.netlify.app/",
 		techStack: [
-			"../../assets/stack-icons/html5.svg",
-			"../../assets/stack-icons/css3.jpg",
+			{
+				path: "../../assets/stack-icons/html5.svg",
+				alt: "HTML5",
+			},
+			{
+				path: "../../assets/stack-icons/css3.svg",
+				alt: "CSS3"
+			},	
+			{
+				path: "../../assets/stack-icons/html5.svg",
+				alt: "HTML5",
+			},
+			{
+				path: "../../assets/stack-icons/css3.svg",
+				alt: "CSS3"
+			},
+			{
+				path: "../../assets/stack-icons/html5.svg",
+				alt: "HTML5",
+			},
+			{
+				path: "../../assets/stack-icons/css3.svg",
+				alt: "CSS3"
+			},	
 		]
 	},
 	{
@@ -33,8 +62,14 @@ const projects = [
 		code: "https://github.com/SDemero/capstone-client",
 		site: "https://ttp-capstone-investedfitness.netlify.app/",
 		techStack: [
-			"../../assets/stack-icons/html5.svg",
-			"../../assets/stack-icons/css3.jpg",
+			{
+				path: "../../assets/stack-icons/html5.svg",
+				alt: "HTML5",
+			},
+			{
+				path: "../../assets/stack-icons/css3.svg",
+				alt: "CSS3"
+			}	
 		]
 	}
 ]
