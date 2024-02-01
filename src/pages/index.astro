@@ -3,8 +3,10 @@
 // import all projects from a separate file
 // import all skills from a separate file
 // create component for project section on index.astro
-// adjust font, color, and background
 // create a sub header component to use for about, skill, project
+// allow for icon to change depends on theme
+
+// adjust font, color, and background
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -21,58 +23,7 @@ import About from '../components/About.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 
-const projects = [
-	{
-		title: "Project 1",
-		description: "This is the my first project",
-		image: "../../assets/stock-1.jpg",
-		code: "https://github.com/SDemero/capstone-client",
-		site: "https://ttp-capstone-investedfitness.netlify.app/",
-		techStack: [
-			{
-				path: "../../assets/stack-icons/html5.svg",
-				alt: "HTML5",
-			},
-			{
-				path: "../../assets/stack-icons/css3.svg",
-				alt: "CSS3"
-			},	
-			{
-				path: "../../assets/stack-icons/html5.svg",
-				alt: "HTML5",
-			},
-			{
-				path: "../../assets/stack-icons/css3.svg",
-				alt: "CSS3"
-			},
-			{
-				path: "../../assets/stack-icons/html5.svg",
-				alt: "HTML5",
-			},
-			{
-				path: "../../assets/stack-icons/css3.svg",
-				alt: "CSS3"
-			},	
-		]
-	},
-	{
-		title: "Project 2",
-		description: "This is the my first project",
-		image: "../../assets/stock-2.jpg",
-		code: "https://github.com/SDemero/capstone-client",
-		site: "https://ttp-capstone-investedfitness.netlify.app/",
-		techStack: [
-			{
-				path: "../../assets/stack-icons/html5.svg",
-				alt: "HTML5",
-			},
-			{
-				path: "../../assets/stack-icons/css3.svg",
-				alt: "CSS3"
-			}	
-		]
-	}
-]
+import { projects } from '../components/ProjectPaths';
 ---
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
@@ -100,7 +51,7 @@ const projects = [
 
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<Skills />
-			<section class="section with-background" id="project">
+			<section class="section with-background bg-variant" id="project">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>My Projects</h3>
 					<p>See my most recent projects below to get an idea of my past experience.</p>
@@ -122,17 +73,17 @@ const projects = [
 				</div>
 			</section>
 
-			<!-- <section class="section with-background bg-variant"> -->
-				<!-- <header class="section-header stack gap-2 lg:gap-4">
+			<!-- <section class="section with-background bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
 						I have been fortunate enough to recieve praise for my work in several publications. Take
 						a look below to learn more.
 					</p>
-				</header> -->
+				</header>
 
-				<!-- <div class="gallery">
-					<Grid variant="small">
+				<div class="gallery">
+					<Grid>
 						{
 							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
 								<li class="mention-card">
@@ -141,8 +92,8 @@ const projects = [
 							))
 						}
 					</Grid>
-				</div> -->
-			<!-- </section> -->
+				</div>
+			</section> -->
 		</main>
 
 		<ContactCTA />

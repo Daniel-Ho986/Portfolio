@@ -2,34 +2,7 @@
 import Hero from './Hero.astro';
 import SkillCategory from './SkillCategory.astro';
 
-const languages = [
-  { path: "html5.svg", alt: "HTML5", modeClasses: [] },
-  { path: "css3.svg", alt: "CSS3", modeClasses: [] },
-  { path: "javascript.svg", alt: "JavaScript", modeClasses: [] },
-  { path: "express.svg", alt: "Express.js", modeClasses: ["light-mode-only"] },
-  { path: "express-dark.svg", alt: "Express.js", modeClasses: ["dark-mode-only"] },
-  { path: "nodejs.svg", alt: "Node.js", modeClasses: [] },
-  { path: "python.svg", alt: "Python", modeClasses: [] },
-  { path: "firebase.svg", alt: "Firebase", modeClasses: [] },
-];
-
-const libraries = [
-  { path: "reactjs.svg", alt: "React.js", modeClasses: [] },
-  { path: "nextjs.svg", alt: "Next.js", modeClasses: ["light-mode-only"] },
-  { path: "nextjs-dark.svg", alt: "Next.js", modeClasses: ["dark-mode-only"] },
-  { path: "astro.svg", alt: "Astro", modeClasses: ["light-mode-only"] },
-  { path: "astro-dark.svg", alt: "Astro", modeClasses: ["dark-mode-only"] },
-];
-
-const databases = [
-  { path: "mongoDB.svg", alt: "MongoDB", modeClasses: [] },
-];
-
-const others = [
-  { path: "cypress-icon.svg", alt: "Cypress", modeClasses: [] },
-  { path: "playwright.svg", alt: "Playwright", modeClasses: [] },
-  { path: "git.svg", alt: "Git", modeClasses: [] },
-];
+import { languages, libraries, databases, others } from './SkillPaths';
 ---
 
 <section class="section" id="skill">
@@ -57,6 +30,8 @@ const others = [
 
 <style>
 	.section {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
 		gap: 2rem;
 		margin-top: 2rem;
 	}
@@ -73,8 +48,6 @@ const others = [
 
 	@media (min-width: 50em) {
 		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
 			gap: 5rem;
 		}
 

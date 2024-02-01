@@ -1,10 +1,9 @@
 /**
  * Icons adapted from https://phosphoricons.com/
  *
- * Want to add more?
- * 1. Find the icon you want on Phosphor Icons.
+ * 1. Find the icons  on Phosphor Icons.
  * 2. Click “Copy SVG”.
- * 3. Paste the SVG code in your editor.
+ * 3. Paste the SVG code.
  * 4. Remove the `<svg>` wrapper so you only have elements like `<path>`, `<circle>`, `<rect>` etc.
  * 5. Remove any `stroke="#000000"` attributes
  * 6. Replace any `fill="#000000"` attributes with `stroke="none"`
