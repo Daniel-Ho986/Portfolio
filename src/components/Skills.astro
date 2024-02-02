@@ -1,16 +1,15 @@
 ---
-import Hero from './Hero.astro';
+import SubHeader from './SubHeader.astro';
 import SkillCategory from './SkillCategory.astro';
 
 import { languages, libraries, databases, others } from './SkillPaths';
 ---
 
-<section class="section" id="skill">
-	<Hero 
-		title="My Skills" 
-		tagline="Passionate about learning and mastering new technologies."
-		align="center">
-	</Hero>
+<section class="section with-background bg-variant" id="skill">
+	<SubHeader 
+		header="My Skills" 
+		description="Passionate about learning and mastering new technologies.">
+	</SubHeader>
 
 	<div class="skills-content">
 		<!-- Render Languages and Tools -->
@@ -30,11 +29,12 @@ import { languages, libraries, databases, others } from './SkillPaths';
 
 <style>
 	.section {
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+		display: grid;
+		/* grid-template-columns: repeat(1, .5fr); */
+		grid-template-areas: 'header header' 'gallery gallery';
 		gap: 2rem;
-		margin-top: 2rem;
 	}
+	
 
 	.skills-content {
 		margin-top: 2rem;

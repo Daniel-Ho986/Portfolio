@@ -18,10 +18,9 @@ const { title, skills } = Astro.props;
     <div class="images-container">
     {skills.map(skill => (
         <img
-        :key={skill.alt}
-        src={`../../assets/stack-icons/${skill.path}`}
-        alt={skill.alt}
-        class={`logo ${skill.modeClasses.join(' ')}`}
+            src={`../../assets/stack-icons/${skill.path}`}
+            alt={skill.alt}
+            class={`logo ${skill.modeClasses.join(' ')}`}
         />
     ))}
     </div>

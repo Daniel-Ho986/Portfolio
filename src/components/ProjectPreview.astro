@@ -1,10 +1,10 @@
 ---
-import Pill from '../components/Pill.astro';
 import Icon from '../components/Icon.astro';
 
 interface TechStack {
 	path: string;
 	alt: string;
+	modeClasses: string[];
 }
 
 interface Props {
@@ -30,7 +30,11 @@ const { title, description, image, code, site, techStack } = Astro.props;
 		<div class="stack">
 			{
 				techStack.map(tech => (
-					<img src={tech.path} alt={tech.alt} class="tech" />
+					<img 
+						src={`../../assets/stack-icons/${tech.path}`} 
+						alt={tech.alt} 
+						class={`tech ${tech.modeClasses.join(' ')}`} 
+					/>
 				))
 			}
 		</div>
@@ -125,6 +129,14 @@ const { title, description, image, code, site, techStack } = Astro.props;
 		max-width: 30px;
   		width: 100%;      
 		height: auto;     
+	}
+
+	:global(.theme-dark) .tech.light-mode-only {
+		display: none;
+	}
+
+	:global(html:not(.theme-dark)) .tech.dark-mode-only {
+		display: none;
 	}
 
 	.project-image {

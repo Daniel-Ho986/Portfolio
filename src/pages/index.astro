@@ -1,8 +1,7 @@
 ---
 // TODO: 
-// import all projects from a separate file
-// import all skills from a separate file
 // create component for project section on index.astro
+
 // create a sub header component to use for about, skill, project
 // allow for icon to change depends on theme
 
@@ -16,7 +15,8 @@ import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
+import PortfolioPreview from '../components/ProjectPreview.astro';
+import SubHeader from '../components/SubHeader.astro';
 
 // Page section components
 import About from '../components/About.astro';
@@ -52,10 +52,10 @@ import { projects } from '../components/ProjectPaths';
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<Skills />
 			<section class="section with-background bg-variant" id="project">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>My Projects</h3>
-					<p>See my most recent projects below to get an idea of my past experience.</p>
-				</header>
+				<SubHeader 
+					header="My Projects" 
+					description="See my most recent projects below to get an idea of my past experience.">
+				</SubHeader>
 
 				<div class="gallery">
 					<Grid>
@@ -72,30 +72,7 @@ import { projects } from '../components/ProjectPaths';
 					</Grid>
 				</div>
 			</section>
-
-			<!-- <section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to recieve praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid>
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section> -->
 		</main>
-
 		<ContactCTA />
 	</div>
 </BaseLayout>
@@ -176,18 +153,6 @@ import { projects } from '../components/ProjectPaths';
 		--hero-bg: var(--bg-image-subtle-1);
 	}
 
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
-		font-size: var(--text-md);
-		color: var(--gray-300);
-	}
-
-	.section-header h3 {
-		font-size: var(--text-2xl);
-	}
-
 	@media (min-width: 50em) {
 		.section {
 			grid-template-columns: repeat(4, 1fr);
@@ -199,15 +164,6 @@ import { projects } from '../components/ProjectPaths';
 			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
 		}
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-		}
-
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
-
 		.with-cta .section-header {
 			justify-self: flex-start;
 			text-align: left;
@@ -217,35 +173,8 @@ import { projects } from '../components/ProjectPaths';
 			grid-area: gallery;
 		}
 
-		/* .gallery-container {
-			max-width: 800px;
-			margin: 0 auto;
-		} */
-
 		.cta {
 			grid-area: cta;
 		}
-	}
-
-	/* ====================================================== */
-
-	/* .mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
-
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
-		} */
-	/* } */
+	}	
 </style>
