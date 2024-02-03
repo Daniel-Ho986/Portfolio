@@ -1,0 +1,42 @@
+---
+import SubHeader from "./SubHeader.astro";
+import Grid from "./Grid.astro";
+import PortfolioPreview from "./ProjectPreview.astro";
+
+import { projects } from "./ProjectPaths";
+---
+<section class="section" id="project">
+    <SubHeader 
+        header="My Projects" 
+        description="See my most recent projects below to get an idea of my past experience.">
+    </SubHeader>
+
+    <div class="gallery">
+        <Grid>
+            {projects.map(project => (
+                <PortfolioPreview 
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    code={project.code}
+                    site={project.site}
+                    techStack={project.techStack}
+                />
+            ))}
+        </Grid>
+    </div>
+</section>
+
+<style>
+    .section {
+        display: grid;
+		grid-template-areas: 'header' 'gallery';
+		gap: 2rem;
+	}
+
+    @media (min-width: 50em) {
+		.section {
+			gap: 5rem;
+		}
+	}
+</style>

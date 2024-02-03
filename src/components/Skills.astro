@@ -30,14 +30,8 @@ import { languages, libraries, databases, others } from './SkillPaths';
 <style>
 	.section {
 		display: grid;
-		/* grid-template-columns: repeat(1, .5fr); */
-		grid-template-areas: 'header header' 'gallery gallery';
+		grid-template-areas: 'header' 'gallery';
 		gap: 2rem;
-	}
-	
-
-	.skills-content {
-		margin-top: 2rem;
 	}
 	
 	.combined-row {
@@ -47,11 +41,7 @@ import { languages, libraries, databases, others } from './SkillPaths';
 	}
 
 	@media (min-width: 50em) {
-		.section {
-			gap: 5rem;
-		}
-
-		.combined-row {
+		.section, .combined-row {
 			gap: 5rem;
 		}
 	}

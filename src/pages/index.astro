@@ -11,19 +11,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Component Imports
-import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/ProjectPreview.astro';
-import SubHeader from '../components/SubHeader.astro';
-
-// Page section components
 import About from '../components/About.astro';
-import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
-
-import { projects } from '../components/ProjectPaths';
+import Projects from '../components/Projects.astro';
+import ContactCTA from '../components/ContactCTA.astro';
 ---
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
@@ -51,7 +45,8 @@ import { projects } from '../components/ProjectPaths';
 
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<Skills />
-			<section class="section with-background bg-variant" id="project">
+			<Projects />
+			<!-- <section class="section with-background bg-variant" id="project">
 				<SubHeader 
 					header="My Projects" 
 					description="See my most recent projects below to get an idea of my past experience.">
@@ -71,7 +66,7 @@ import { projects } from '../components/ProjectPaths';
 						))}
 					</Grid>
 				</div>
-			</section>
+			</section> -->
 		</main>
 		<ContactCTA />
 	</div>
@@ -120,11 +115,6 @@ import { projects } from '../components/ProjectPaths';
 
 	/* ====================================================== */
 
-	.section {
-		display: grid;
-		gap: 2rem;
-	}
-
 	.with-background {
 		position: relative;
 	}
@@ -154,11 +144,6 @@ import { projects } from '../components/ProjectPaths';
 	}
 
 	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
 
 		.section.with-cta {
 			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
@@ -167,10 +152,6 @@ import { projects } from '../components/ProjectPaths';
 		.with-cta .section-header {
 			justify-self: flex-start;
 			text-align: left;
-		}
-
-		.gallery {
-			grid-area: gallery;
 		}
 
 		.cta {
