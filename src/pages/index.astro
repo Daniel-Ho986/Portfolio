@@ -1,10 +1,5 @@
 ---
 // TODO: 
-// create component for project section on index.astro
-
-// create a sub header component to use for about, skill, project
-// allow for icon to change depends on theme
-
 // adjust font, color, and background
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
@@ -40,33 +35,12 @@ import ContactCTA from '../components/ContactCTA.astro';
 					src="/assets/picture.jpg"
 				/>
 			</header>
-			<About />
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
+			<About />
 			<Skills />
 			<Projects />
-			<!-- <section class="section with-background bg-variant" id="project">
-				<SubHeader 
-					header="My Projects" 
-					description="See my most recent projects below to get an idea of my past experience.">
-				</SubHeader>
-
-				<div class="gallery">
-					<Grid>
-						{projects.map(project => (
-							<PortfolioPreview 
-								title={project.title}
-								description={project.description}
-								image={project.image}
-								code={project.code}
-								site={project.site}
-								techStack={project.techStack}
-							/>
-						))}
-					</Grid>
-				</div>
-			</section> -->
 		</main>
 		<ContactCTA />
 	</div>

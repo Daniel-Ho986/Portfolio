@@ -1,75 +1,59 @@
 ---
-import Hero from './Hero.astro';
+import SubHeader from './SubHeader.astro';
 ---
 
-<section class="about" id="about">
-    <Hero title="About" tagline="Thanks for stopping by. Read below to learn more about myself and my background.">
-    </Hero>
+<section class="section" id="about">
+    <SubHeader header="About Me" description="Discover the journey of a software engineer dedicated to creating compelling digital experiences."></SubHeader>
 
-    <section>
-        <h2 class="section-title">Background</h2>
-        <div class="content">
-            {/* Add your background content here */}
-        </div>
-    </section>
-
-    {/* Add Education and Skills sections similarly */}
+    <div class="about-content">
+        <p>
+            Hey there! I'm Daniel Ho, a dedicated Software Engineer with a knack for crafting seamless and high-performance applications. 
+        </p>
+        <p>
+            <strong class="highlight">🚀 Crafting Digital Experiences:</strong> My passion revolves around building scalable and performant apps that not only meet but exceed user expectations. I believe in the power of intuitive design and robust backend architecture to create software that stands out.
+        </p>
+        <p>
+            <strong class="highlight">🌟 The Art of Coding:</strong> To me, coding is an art form. I enjoy the process of bringing ideas to life in the digital realm, whether it's through sleek user interfaces or complex backend functionalities. Creating something unique and innovative is what drives me forward.
+        </p>
+        <p>
+            <strong class="highlight">🔧 Current Endeavors:</strong> I'm currently immersed in some exciting projects that showcase my commitment to excellence. Stay tuned for updates on these ventures—I can't wait to share the results with you!
+        </p>
+        <p>
+            <strong class="highlight">🤝 Open to Collaborations:</strong> While I'm deeply engaged in my ongoing projects, I'm always open to new opportunities and collaborations. If you have a project or idea you'd like to discuss, feel free to reach out. Let's create something remarkable together!
+        </p>
+    </div>
 </section>
 
 <style>
-    .about {
+    .section {
         display: flex;
         flex-direction: column;
-        gap: 3.5rem;
+        align-items: center;
+        text-align: start;
     }
 
-    img {
-        margin-top: 1.5rem;
-        border-radius: 1.5rem;
-        box-shadow: var(--shadow-md);
+    .about-content {
+        max-width: 800px;
+        width: 100%;
     }
 
-    section {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        color: var(--gray-200);
+    p {
+        position: relative;
+        padding: 2rem;
+        font-size: var(--text-base);
+		color: var(--gray-300);
     }
 
-    .section-title {
-        grid-column-start: 1;
-        font-size: var(--text-xl);
-        color: var(--gray-0);
-    }
-
-    .content {
-        grid-column: 2 / 4;
-    }
-
-    .content :global(a) {
-        text-decoration: 1px solid underline transparent;
-        text-underline-offset: 0.25em;
-        transition: text-decoration-color var(--theme-transition);
-    }
-
-    .content :global(a:hover),
-    .content :global(a:focus) {
-        text-decoration-color: currentColor;
+    .highlight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-30%);
+        padding: 1rem 2rem;
+        z-index: 1;
     }
 
     @media (min-width: 50em) {
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 60% 1fr;
-        }
-
-        .about > :global(:first-child) {
-            grid-column-start: 2;
-        }
-
-        section {
-            display: contents;
-            font-size: var(--text-lg);
-        }
+        ...
     }
 </style>
