@@ -1,5 +1,7 @@
 ---
 import SubHeader from './SubHeader.astro';
+import CallToAction from './CallToAction.astro';
+import Icon from './Icon.astro';
 ---
 
 <section class="section" id="about">
@@ -7,13 +9,13 @@ import SubHeader from './SubHeader.astro';
 
     <div class="about-content">
         <p>
-            Hey there! I'm Daniel Ho, a dedicated Software Engineer with a knack for crafting seamless and high-performance applications. 
+            Hey there! I'm Daniel Ho, a dedicated Software Engineer based in New York with a knack for crafting seamless and high-performance applications. 
         </p>
         <p>
-            <strong class="highlight">🚀 Crafting Digital Experiences:</strong> My passion revolves around building scalable and performant apps that not only meet but exceed user expectations. I believe in the power of intuitive design and robust backend architecture to create software that stands out.
+            <strong class="highlight">🚀 Crafting Digital Experiences:</strong> My passion revolves around building scalable and performant apps that not only meet but exceed user expectations.
         </p>
         <p>
-            <strong class="highlight">🌟 The Art of Coding:</strong> To me, coding is an art form. I enjoy the process of bringing ideas to life in the digital realm, whether it's through sleek user interfaces or complex backend functionalities. Creating something unique and innovative is what drives me forward.
+            <strong class="highlight">🌟 The Art of Coding:</strong> To me, coding is an art form. I enjoy the process of bringing ideas to life in the digital realm. Creating something unique and innovative is what drives me forward.
         </p>
         <p>
             <strong class="highlight">🔧 Current Endeavors:</strong> I'm currently immersed in some exciting projects that showcase my commitment to excellence. Stay tuned for updates on these ventures—I can't wait to share the results with you!
@@ -22,17 +24,23 @@ import SubHeader from './SubHeader.astro';
             <strong class="highlight">🤝 Open to Collaborations:</strong> While I'm deeply engaged in my ongoing projects, I'm always open to new opportunities and collaborations. If you have a project or idea you'd like to discuss, feel free to reach out. Let's create something remarkable together!
         </p>
     </div>
+    <aside class="action-container">
+        <CallToAction href="mailto:Daniel.ho0703@gmail.com">
+            Let's Collaborate
+            <Icon icon="paper-plane-tilt" size="1.2em" />
+        </CallToAction>
+    </aside>
 </section>
+
 
 <style>
     .section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: start;
     }
 
-    .about-content {
+    .about-content { 
         max-width: 800px;
         width: 100%;
     }
@@ -40,8 +48,9 @@ import SubHeader from './SubHeader.astro';
     p {
         position: relative;
         padding: 2rem;
+        font-family: var(--font-body);
         font-size: var(--text-base);
-		color: var(--gray-300);
+		color: var(--gray-200);
     }
 
     .highlight {
@@ -53,7 +62,13 @@ import SubHeader from './SubHeader.astro';
         z-index: 1;
     }
 
+    .action-container {
+        margin-left: auto;
+    }
+
     @media (min-width: 50em) {
-        ...
+        .action-container {
+            transform: translateX(-50%);
+        }
     }
 </style>

@@ -1,6 +1,6 @@
 export const projects = [
 	{
-		title: "Project 1",
+		title: "Portfolio",
 		description: "This is the my first project",
 		image: "../../assets/stock-1.jpg",
 		code: "https://github.com/SDemero/capstone-client",
@@ -14,14 +14,15 @@ export const projects = [
 		]
 	},
 	{
-		title: "Project 2",
+		title: "Mini Project Gallery",
 		description: "This is the my first project",
 		image: "../../assets/stock-2.jpg",
-		code: "https://github.com/SDemero/capstone-client",
-		site: "https://ttp-capstone-investedfitness.netlify.app/",
+		code: "https://github.com/Daniel-Ho986/50-mini-projects",
+		site: "https://daniel-ho986-mini-projects.netlify.app/",
 		techStack: [
 			{ path: "html5.svg", alt: "HTML5", modeClasses: [] },
-			{ path: "css3.svg", alt: "CSS3", modeClasses: [] },	
+			{ path: "css3.svg", alt: "CSS3", modeClasses: [] },
+			{ path: "javascript.svg", alt: "JavaScript", modeClasses: [] },
 		]
 	}
 ]

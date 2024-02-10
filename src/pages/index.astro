@@ -13,6 +13,7 @@ import About from '../components/About.astro';
 import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
 import ContactCTA from '../components/ContactCTA.astro';
+
 ---
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
@@ -20,20 +21,15 @@ import ContactCTA from '../components/ContactCTA.astro';
 			<header class="hero">
 				<Hero
 					title="Hello, my name is Daniel Ho"
-					tagline="I am a Software Engineer who is currently based in Brookyln, New York."
+					tagline=""
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" />Developer</Pill>
+						<a href="/assets/resume.pdf" download><Pill><Icon icon="read-cv" size="1.33em" />Resume</Pill></a>
 					</div>
 				</Hero>
 
-				<img
-					alt="Daniel Ho"
-					width="480"
-					height="620"
-					src="/assets/picture.jpg"
-				/>
+				<img alt="Daniel Ho" src="/assets/picture.jpg" />
 			</header>
 		</div>
 
@@ -54,16 +50,14 @@ import ContactCTA from '../components/ContactCTA.astro';
 		gap: 2rem;
 	}
 
-	.roles {
-		display: none;
-	}
-
 	.hero img {
-		aspect-ratio: 5 / 4;
+		/* aspect-ratio: 5 / 4; */
 		object-fit: cover;
 		object-position: top;
 		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
+		box-shadow: var(--shadow-lg);
+		width: 380px;
+		height: 520px;
 	}
 
 	@media (min-width: 50em) {
@@ -86,8 +80,6 @@ import ContactCTA from '../components/ContactCTA.astro';
 			object-fit: cover;
 		}
 	}
-
-	/* ====================================================== */
 
 	.with-background {
 		position: relative;
