@@ -1,6 +1,10 @@
 ---
-// TODO: 
-// adjust font, color, and background
+// DONE:
+// Glassmorphism for project cards
+// Let's collaborate button in middle on small size
+
+// TODO:
+// New Portrait
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -51,7 +55,6 @@ import ContactCTA from '../components/ContactCTA.astro';
 	}
 
 	.hero img {
-		/* aspect-ratio: 5 / 4; */
 		object-fit: cover;
 		object-position: top;
 		border-radius: 1.5rem;
@@ -75,7 +78,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 		}
 
 		.hero img {
-			aspect-ratio: 3 / 4;
+			/* aspect-ratio: 3 / 4; */
 			border-radius: 4.5rem;
 			object-fit: cover;
 		}
@@ -93,7 +96,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 		pointer-events: none;
 		left: 50%;
 		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
+		/* aspect-ratio: calc(2.25 / var(--bg-scale)); */
 		top: 0;
 		transform: translateY(-75%) translateX(-50%);
 		background:
