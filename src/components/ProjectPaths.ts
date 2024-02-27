@@ -2,7 +2,7 @@ export const projects = [
 	{
 		title: "My Portfolio",
 		description: "Explore my professional journey, skills, and projects in one place with my portfolio.",
-		image: "../../assets/stock-1.jpg",
+		image: "../../assets/portfolio.png",
 		code: "https://github.com/Daniel-Ho986/Portfolio",
 		site: "https://daniel-ho986-portfolio.netlify.app/",
 		techStack: [

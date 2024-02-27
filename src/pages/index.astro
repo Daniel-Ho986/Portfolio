@@ -1,8 +1,4 @@
 ---
-// DONE:
-// Glassmorphism for project cards
-// Let's collaborate button in middle on small size
-
 // TODO:
 // New Portrait
 
@@ -28,9 +24,9 @@ import ContactCTA from '../components/ContactCTA.astro';
 					tagline=""
 					align="start"
 				>
-					<div class="roles">
+					<!-- <div class="roles">
 						<a href="/assets/resume.pdf" download><Pill><Icon icon="read-cv" size="1.33em" />Resume</Pill></a>
-					</div>
+					</div> -->
 				</Hero>
 
 				<img alt="Daniel Ho" src="/assets/picture.jpg" />
@@ -78,7 +74,6 @@ import ContactCTA from '../components/ContactCTA.astro';
 		}
 
 		.hero img {
-			/* aspect-ratio: 3 / 4; */
 			border-radius: 4.5rem;
 			object-fit: cover;
 		}
@@ -90,13 +85,11 @@ import ContactCTA from '../components/ContactCTA.astro';
 
 	.with-background::before {
 		--hero-bg: var(--bg-image-subtle-2);
-
 		content: '';
 		position: absolute;
 		pointer-events: none;
 		left: 50%;
 		width: 100vw;
-		/* aspect-ratio: calc(2.25 / var(--bg-scale)); */
 		top: 0;
 		transform: translateY(-75%) translateX(-50%);
 		background:

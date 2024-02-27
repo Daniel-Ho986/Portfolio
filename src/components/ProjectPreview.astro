@@ -10,7 +10,7 @@ interface TechStack {
 interface Props {
 	title: string;
 	description: string;
-	image: string;
+	image?: string;
 	code: string;
 	site: string;
 	techStack: TechStack[];
@@ -39,8 +39,12 @@ const { title, description, image, code, site, techStack } = Astro.props;
 			}
 		</div>
 	</div>
-	<img src={image} alt={title} class="project-image" loading="lazy" decoding="async" /> 
-</dvi>
+	{
+		image 
+		? <img src={image} alt={title} class="project-image" loading="lazy" decoding="async" /> 
+		: <div class="image-container"><p>Coming Soon...</p></div>
+	}
+</div>
 
 <style>
 	.card {
@@ -138,7 +142,7 @@ const { title, description, image, code, site, techStack } = Astro.props;
 		display: none;
 	}
 
-	.project-image {
+	.project-image, .image-container {
 		position: absolute;
 		grid-area: 2 / 1 / 2 / 1;
 		width: 100%;
@@ -146,6 +150,20 @@ const { title, description, image, code, site, techStack } = Astro.props;
 		align-self: center;
 		justify-self: center;
 		object-fit: cover;
+	}
+
+	.image-container {
+		text-align: center;
+		background-color: var(--accent-dark);
+		color: #e3e6ee;
+	}
+
+	.image-container p {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: var(--text-lg);
 	}
 
 	@media (min-width: 45em) {
@@ -176,7 +194,7 @@ const { title, description, image, code, site, techStack } = Astro.props;
 			margin-top: -10px;
 		}
 
-		.project-image {
+		.project-image, .image-container {
 			position: absolute;
 			grid-area: 1 / 2 / 1 / 2;
 			height: 70%;
