@@ -6,11 +6,11 @@ export const projects = [
 		code: "https://github.com/Daniel-Ho986/Portfolio",
 		site: "https://daniel-ho986-portfolio.netlify.app/",
 		techStack: [
-            { path: "astro.svg", alt: "Astro", modeClasses: ["light-mode-only"] },
-            { path: "astro-dark.svg", alt: "Astro", modeClasses: ["dark-mode-only"] },
-			{ path: "javascript.svg", alt: "JavaScript", modeClasses: [] },	
-			{ path: "typescript.svg", alt: "TypeScript", modeClasses: [] },
-			{ path: "css3.svg", alt: "CSS3", modeClasses: [] },
+            { path: "libraries/astro.png", alt: "Astro", modeClasses: ["light-mode-only"] },
+            { path: "libraries/astro-dark.png", alt: "Astro", modeClasses: ["dark-mode-only"] },
+			{ path: "languages/js.svg", alt: "JavaScript", modeClasses: [] },	
+			{ path: "languages/typescript.svg", alt: "TypeScript", modeClasses: [] },
+			{ path: "languages/css3.png", alt: "CSS3", modeClasses: [] },
 		]
 	},
 	{
@@ -20,12 +20,14 @@ export const projects = [
 		code: "https://github.com/Daniel-Ho986/campsite",
 		site: "https://campsite-5u82.onrender.com/",
 		techStack: [
-			{ "path": "nodejs.svg", "alt": "Node.js", "modeClasses": [] },
-			{ "path": "express.svg", "alt": "Express", "modeClasses": [] },
-			{ "path": "mongodb.svg", "alt": "MongoDB", "modeClasses": [] },
-			// { "path": "mongoose.svg", "alt": "Mongoose", "modeClasses": [] },
-			// { "path": "cloudinary.svg", "alt": "Cloudinary", "modeClasses": [] },
-			// { "path": "bootstrap.svg", "alt": "Bootstrap", "modeClasses": [] },
+			{ "path": "libraries/nodejs.png", "alt": "Node.js", "modeClasses": [] },
+			{ "path": "libraries/express.svg", "alt": "Express", "modeClasses": ["light-mode-only"] },
+			{ "path": "libraries/express-dark.svg", "alt": "Express", "modeClasses": ["dark-mode-only"] },
+			{ "path": "databases/mongodb.png", "alt": "MongoDB", "modeClasses": [] },
+			{ "path": "databases/mongoose.png", "alt": "Mongoose", "modeClasses": [] },
+			{ "path": "others/cloudinary.png", "alt": "Cloudinary", "modeClasses": [] },
+			{ "path": "others/bootstrap5.png", "alt": "Bootstrap", "modeClasses": ["light-mode-only"] },
+			{ "path": "others/bootstrap5-dark.png", "alt": "Bootstrap", "modeClasses": ["dark-mode-only"] },
 		]
 	},
 	{
@@ -35,9 +37,9 @@ export const projects = [
 		code: "https://github.com/Daniel-Ho986/mini-project-showcase",
 		site: "https://daniel-ho986-mini-project-showcase.netlify.app/",
 		techStack: [
-			{ path: "html5.svg", alt: "HTML5", modeClasses: [] },
-			{ path: "css3.svg", alt: "CSS3", modeClasses: [] },
-			{ path: "javascript.svg", alt: "JavaScript", modeClasses: [] },
+			{ path: "languages/html5.png", alt: "HTML5", modeClasses: [] },
+			{ path: "languages/css3.png", alt: "CSS3", modeClasses: [] },
+			{ path: "languages/js.svg", alt: "JavaScript", modeClasses: [] },
 		]
 	}
 ]

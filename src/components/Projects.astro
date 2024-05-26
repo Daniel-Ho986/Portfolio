@@ -1,7 +1,7 @@
 ---
 import SubHeader from "./SubHeader.astro";
 import Grid from "./Grid.astro";
-import PortfolioPreview from "./ProjectPreview.astro";
+import ProjectPreview from "./ProjectPreview.astro";
 
 import { projects } from "./ProjectPaths";
 ---
@@ -14,7 +14,7 @@ import { projects } from "./ProjectPaths";
     <div class="gallery">
         <Grid>
             {projects.map(project => (
-                <PortfolioPreview 
+                <ProjectPreview 
                     title={project.title}
                     description={project.description}
                     image={project.image}
