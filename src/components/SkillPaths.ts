@@ -15,6 +15,7 @@ export const libraries = [
     { path: "libraries/astro.png", alt: "Astro", modeClasses: ["light-mode-only"] },
     { path: "libraries/astro-dark.png", alt: "Astro", modeClasses: ["dark-mode-only"] },
     { path: "libraries/nodejs.png", alt: "Node.js", modeClasses: [] },
+	{ path: "libraries/tailwindcss.png", alt: "Tailwind CSS", modeClasses: [] },
 ];
 
 export const databases = [
