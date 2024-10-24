@@ -16,7 +16,7 @@ export const projects = [
 	{
 		title: "Stay Booker",
 		"description": "Effortlessly book your perfect hotel stay with a user-friendly platform. Enjoy seamless hotel management, integrated payments, and a responsive design that connects guests and hotel owners.",
-		image: "../../assets/project-images/campsite.png",
+		image: "../../assets/project-images/stay-booker.png",
 		code: "https://github.com/Daniel-Ho986/stay-booker",
 		site: "https://stay-booker.onrender.com/",
 		techStack: [
