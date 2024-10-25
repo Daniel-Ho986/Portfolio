@@ -3,7 +3,7 @@ export const languages = [
     { path: "languages/css3.png", alt: "CSS3", modeClasses: [] },
     { path: "languages/js.svg", alt: "JavaScript", modeClasses: [] },
     { path: "languages/typescript.svg", alt: "TypeScript", modeClasses: [] },
-    { path: "languages/python.png", alt: "Python", modeClasses: [] },
+    // { path: "languages/python.png", alt: "Python", modeClasses: [] },
 ];
 
 export const libraries = [
@@ -21,11 +21,11 @@ export const libraries = [
 export const databases = [
     { path: "databases/mongodb.png", alt: "MongoDB", modeClasses: [] },
     { path: "databases/mongoose.png", alt: "Mongoose", modeClasses: [] },
-    { path: "databases/postgresql.png", alt: "PostgreSQL", modeClasses: [] },
+    // { path: "databases/postgresql.png", alt: "PostgreSQL", modeClasses: [] },
 ];
 
 export const others = [
-    { path: "others/firebase.svg", alt: "Firebase", modeClasses: [] },
+    // { path: "others/firebase.svg", alt: "Firebase", modeClasses: [] },
     { path: "others/cloudinary.png", alt: "Cloudinary", modeClasses: [] },
 	{ path: "others/bootstrap5.png", alt: "Bootstrap", modeClasses: ["light-mode-only"] },
     { path: "others/bootstrap5-dark.png", alt: "Bootstrap", modeClasses: ["dark-mode-only"] },
